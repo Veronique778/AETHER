@@ -1,0 +1,5 @@
+kivy>=2.3.0
+numpy>=1.26
+pandas>=2.2
+matplotlib>=3.8
+pydantic>=2.7

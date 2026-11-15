@@ -1,0 +1,19 @@
+
+/* Multi-platform release panel: standalone enhancement to the existing static React site. */
+.aether-platforms { margin: 2.2rem 0 0; }
+.aether-platform-heading { margin:0; font-size: 1.35rem; font-weight:700; color:#e6f4ff; }
+.aether-platform-intro { margin: .5rem 0 1.3rem; font-size:.95rem; color:#a4bacb; max-width:60rem; }
+.aether-platform-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+.aether-platform-card { border:1px solid rgba(100,160,195,.35); border-radius:16px; padding:1.2rem; background:rgba(7,26,42,.8); min-width:0; }
+.aether-platform-top { display:flex; gap:.5rem; align-items:center; justify-content:space-between; }
+.aether-platform-title {font-size:1.1rem;font-weight:650;color:#f0f9ff;}
+.aether-platform-status {font-size:.63rem;letter-spacing:.09em; color:#a2aec0; border:1px solid #60798d; border-radius:100px; padding:.24rem .48rem; white-space:nowrap; }
+.aether-platform-arch {margin:.5rem 0;color:#7fb6cb;font-size:.84rem;}
+.aether-platform-version {font-weight:600;font-size:.82rem;color:#d0e5ef;}
+.aether-platform-note {margin:.55rem 0 1.1rem;font-size:.83rem;line-height:1.5;color:#a2bac9; min-height:3.5rem;}
+.aether-platform-disabled,.aether-platform-download {display:block;border-radius:10px;padding:.72rem .8rem;text-align:center;font-weight:600;font-size:.84rem;text-decoration:none;}
+.aether-platform-disabled {border:1px solid #49667a;color:#9bacbf;background:#182c3b;cursor:not-allowed;}
+.aether-platform-download {background:#b2faff;color:#073044;}
+.aether-platform-download:hover,.aether-platform-download:focus-visible {background:#e0ffff;color:#061d26;}
+.aether-platform-sha {display:block;color:#a2b6c5;overflow-wrap:anywhere;margin-top:.7rem;font-size:.68rem;}
+@media (max-width:800px) { .aether-platform-grid {grid-template-columns:1fr} .aether-platform-note {min-height:auto;} }

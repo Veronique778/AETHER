@@ -1,0 +1,253 @@
+{
+  "id": "mars_day_67_multifactor",
+  "title": "Mars flight — day 67",
+  "seed": 67,
+  "start": "2035-01-01T00:00:00Z",
+  "mission_day": 67,
+  "duration_minutes": 1440,
+  "sample_minutes": 30,
+  "environment": {
+    "temperature": 22.0,
+    "humidity": 45.0,
+    "co2": 800.0,
+    "light": 500.0,
+    "night_light": 5.0,
+    "lights_on_hour": 7.0,
+    "lights_off_hour": 22.0,
+    "zone_id": "habitat"
+  },
+  "planning": {
+    "crew": [
+      {
+        "id": 1,
+        "name": "Alex",
+        "role": "Commander",
+        "skills": [
+          "science",
+          "maintenance"
+        ],
+        "available": [
+          {
+            "start": 480,
+            "end": 1200
+          }
+        ],
+        "rest": [],
+        "max_work_minutes_per_day": 480,
+        "max_continuous_minutes": 120,
+        "break_minutes": 15,
+        "max_load_per_day": 8.0
+      },
+      {
+        "id": 2,
+        "name": "Sam",
+        "role": "Engineer",
+        "skills": [
+          "maintenance"
+        ],
+        "available": [
+          {
+            "start": 480,
+            "end": 1200
+          }
+        ],
+        "rest": [],
+        "max_work_minutes_per_day": 480,
+        "max_continuous_minutes": 120,
+        "break_minutes": 15,
+        "max_load_per_day": 8.0
+      },
+      {
+        "id": 3,
+        "name": "Robin",
+        "role": "Researcher",
+        "skills": [
+          "science"
+        ],
+        "available": [
+          {
+            "start": 480,
+            "end": 1200
+          }
+        ],
+        "rest": [],
+        "max_work_minutes_per_day": 480,
+        "max_continuous_minutes": 120,
+        "break_minutes": 15,
+        "max_load_per_day": 8.0
+      }
+    ],
+    "tasks": [
+      {
+        "id": "inspect",
+        "title": "Cabin inspection",
+        "description": "",
+        "priority": 5,
+        "duration_minutes": 60,
+        "required_skills": [
+          "maintenance"
+        ],
+        "people": 1,
+        "earliest": 480,
+        "deadline": 1200,
+        "dependencies": [],
+        "equipment": {
+          "toolkit": 1
+        },
+        "physical_load": 0.5,
+        "cognitive_load": 0.5
+      },
+      {
+        "id": "repair",
+        "title": "Preventive maintenance",
+        "description": "",
+        "priority": 4,
+        "duration_minutes": 90,
+        "required_skills": [
+          "maintenance"
+        ],
+        "people": 1,
+        "earliest": 480,
+        "deadline": 1200,
+        "dependencies": [
+          "inspect"
+        ],
+        "equipment": {
+          "toolkit": 1
+        },
+        "physical_load": 0.8,
+        "cognitive_load": 0.5
+      },
+      {
+        "id": "samples",
+        "title": "Collect samples",
+        "description": "",
+        "priority": 4,
+        "duration_minutes": 60,
+        "required_skills": [
+          "science"
+        ],
+        "people": 1,
+        "earliest": 480,
+        "deadline": 1200,
+        "dependencies": [],
+        "equipment": {
+          "lab": 1
+        },
+        "physical_load": 0.5,
+        "cognitive_load": 0.5
+      },
+      {
+        "id": "experiment",
+        "title": "Joint experiment",
+        "description": "",
+        "priority": 3,
+        "duration_minutes": 90,
+        "required_skills": [
+          "science"
+        ],
+        "people": 2,
+        "earliest": 480,
+        "deadline": 1200,
+        "dependencies": [
+          "samples"
+        ],
+        "equipment": {
+          "lab": 1
+        },
+        "physical_load": 0.5,
+        "cognitive_load": 0.5
+      },
+      {
+        "id": "report",
+        "title": "Research report",
+        "description": "",
+        "priority": 3,
+        "duration_minutes": 60,
+        "required_skills": [
+          "science"
+        ],
+        "people": 1,
+        "earliest": 480,
+        "deadline": 1200,
+        "dependencies": [
+          "experiment"
+        ],
+        "equipment": {},
+        "physical_load": 0.5,
+        "cognitive_load": 0.5
+      },
+      {
+        "id": "inventory",
+        "title": "Inventory",
+        "description": "",
+        "priority": 2,
+        "duration_minutes": 45,
+        "required_skills": [],
+        "people": 1,
+        "earliest": 480,
+        "deadline": 1200,
+        "dependencies": [],
+        "equipment": {},
+        "physical_load": 0.5,
+        "cognitive_load": 0.5
+      }
+    ],
+    "equipment": [
+      {
+        "id": "lab",
+        "capacity": 1,
+        "unavailable": []
+      },
+      {
+        "id": "toolkit",
+        "capacity": 1,
+        "unavailable": []
+      }
+    ],
+    "horizon_minutes": 1440,
+    "step_minutes": 15,
+    "time_limit_seconds": 10.0
+  },
+  "baselines": {
+    "1": {
+      "heart_rate": 65.0,
+      "sleep_hours": 8.0,
+      "sleep_quality": 85.0,
+      "activity": 60.0,
+      "fatigue": 2.0,
+      "cognition": 90.0
+    },
+    "2": {
+      "heart_rate": 70.0,
+      "sleep_hours": 8.0,
+      "sleep_quality": 85.0,
+      "activity": 60.0,
+      "fatigue": 2.0,
+      "cognition": 88.0
+    },
+    "3": {
+      "heart_rate": 62.0,
+      "sleep_hours": 8.5,
+      "sleep_quality": 85.0,
+      "activity": 60.0,
+      "fatigue": 2.0,
+      "cognition": 90.0
+    }
+  },
+  "sleep_hours": 8.0,
+  "extra_rest_hours": 0.0,
+  "workload_hours": 0.0,
+  "intensity": 1.0,
+  "noise": 0.2,
+  "events": [
+    {
+      "minute": 360,
+      "kind": "multifactor",
+      "intensity": 1.0,
+      "crew_id": 1,
+      "ramp_minutes": 360
+    }
+  ],
+  "model_version": "educational-1.0"
+}

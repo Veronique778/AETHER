@@ -1,0 +1,58 @@
+{
+  "version": "level-a-v1",
+  "detector_processing_version": "aether-phantom-personal-1.5.1",
+  "note": "Every expected value below was derived by hand (derivation field), NOT by running the code under test.",
+  "baseline_median_mad": {
+    "window_means": [60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 90],
+    "derivation": "sorted 12 values; median = (65+66)/2 = 65.5; |x-65.5| sorted = 0.5,0.5,1.5,1.5,2.5,2.5,3.5,3.5,4.5,4.5,5.5,24.5; MAD = (2.5+3.5)/2 = 3.0; scale = max(3, 1.4826*3.0) = 4.4478",
+    "median": 65.5, "mad": 3.0, "scale": 4.448, "scale_unrounded": 4.4478, "floor_applied": false,
+    "reporting_note": "scale is REPORTED rounded to 3 decimals (4.448); scores use the unrounded 4.4478",
+    "test_windows": [
+      {"mean": 81.07, "z": 3.501, "outcome": "flag", "derivation": "|81.07-65.5|/4.4478 = 15.57/4.4478 = 3.50061"},
+      {"mean": 81.0, "z": 3.485, "outcome": "no_flag", "derivation": "15.5/4.4478 = 3.48487"},
+      {"mean": 49.9, "z": 3.507, "outcome": "flag", "derivation": "|49.9-65.5| = 15.6; 15.6/4.4478 = 3.50735 (two-sided)"},
+      {"mean": 81.0656, "z": 3.5, "outcome": "flag", "derivation": "15.5656/4.4478: 4.4478*3.4996 = 15.56552, rest 0.00008/4.4478 = 0.000018 → z = 3.499618 < 3.5, but it is rounded to 3 decimals (3.5) BEFORE the comparison → flag. The window mean is first rounded to 0.001 bpm (81.066 → z = 15.566/4.4478 = 3.49971) and z is rounded to 0.001 before the comparison → flag. Effective threshold ≈ 3.4995 (documented discretisation, FORMULA_AUDIT F-7)"}
+    ]
+  },
+  "scale_floor": {
+    "window_means": [60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60],
+    "derivation": "MAD = 0 → 1.4826*0 = 0 < 3 → scale = 3 (floor)",
+    "median": 60.0, "mad": 0.0, "scale": 3.0, "scale_unrounded": 3.0, "floor_applied": true,
+    "test_windows": [
+      {"mean": 70.5, "z": 3.5, "outcome": "flag", "derivation": "10.5/3 = 3.5"},
+      {"mean": 70.4, "z": 3.467, "outcome": "no_flag", "derivation": "10.4/3 = 3.4667"}
+    ]
+  },
+  "coverage_rules": [
+    {"case": "20 valid, span 285 s, gaps 15 s", "times_s": "0,15,...,285", "usable": true, "reason": null},
+    {"case": "19 valid", "times_s": "0,15,...,270", "usable": false, "reason": "too_few_samples"},
+    {"case": "20 valid, span 239 s", "times_s": "0..239 evenly (19 gaps of 239/19 s)", "usable": false, "reason": "coverage_too_short"},
+    {"case": "gap 60.5 s", "times_s": "0..120 every 10 s, then 180.5..300 every 10 s", "usable": false, "reason": "gap_too_long"},
+    {"case": "gap exactly 60 s", "times_s": "0..120 every 10 s, then 180..290 every 10 s", "usable": true, "reason": null},
+    {"case": "valid fraction 0.8 exactly (24 valid of 30)", "usable": true, "reason": null},
+    {"case": "valid fraction 23/30 = 0.7667", "usable": false, "reason": "low_valid_fraction"}
+  ],
+  "windows_half_open": {
+    "derivation": "window k = [from + 300k, from + 300(k+1)); a sample at from+300 s belongs to window 1, not 0; samples before from or at/after to belong to no window (never clamped into an edge window)",
+    "sample_offsets_s": [-1, 0, 299.999, 300, 599.999, 600],
+    "interval_s": 600,
+    "expected_window_of_each": [null, 0, 0, 1, 1, null]
+  },
+  "rr_1_1024": [
+    {"raw": 1024, "ms": 1000.0}, {"raw": 768, "ms": 750.0}, {"raw": 512, "ms": 500.0},
+    {"raw": 1, "ms": 0.9765625}, {"raw": 1000, "ms": 976.5625}
+  ],
+  "hrs_packets": [
+    {"hex": "16480004", "derivation": "flags 0x16 = RR present (0x10) + contact supported (0x04) + contact detected (0x02); HR uint8 0x48 = 72; RR raw little-endian 00 04 = 0x0400 = 1024 → 1000 ms", "hr": 72, "contact": true, "rr_ms": [1000.0]},
+    {"hex": "1448", "derivation": "flags 0x14: RR flag set but no RR bytes → corrupt", "error": "CorruptedData"},
+    {"hex": "0148", "derivation": "flags 0x01 = uint16 HR but only 1 byte → truncated", "error": "CorruptedData"},
+    {"hex": "044800", "derivation": "flags 0x04 contact supported, NOT detected; HR 72; one trailing byte → corrupt", "error": "CorruptedData"},
+    {"hex": "0448", "derivation": "contact supported, not detected → contact false", "hr": 72, "contact": false, "rr_ms": []}
+  ],
+  "missing_values": {"derivation": "30 valid + 5 missing → valid fraction 30/35 = 0.857 ≥ 0.8 → usable, mean of VALID = 60; 30 valid + 10 missing → 30/40 = 0.75 < 0.8 → unusable (low_valid_fraction): missing data lowers coverage, never the value", "five_missing": {"usable": true, "mean": 60.0}, "ten_missing": {"usable": false, "reason": "low_valid_fraction"}},
+  "time": [
+    {"in": "2026-01-05T10:00:00+02:00", "out": "2026-01-05T08:00:00.000Z"},
+    {"in": "2026-01-05T08:00:00Z", "out": "2026-01-05T08:00:00.000Z"},
+    {"in": "2026-01-05T08:00:00", "error": "TimestampWithoutOffset"}
+  ]
+}

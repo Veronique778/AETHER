@@ -1,0 +1,11 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "AETHER main window: window controls only (fullscreen toggle). The backend is reached over plain HTTP on 127.0.0.1; no shell, filesystem or network permissions are exposed to the web UI.",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "core:window:allow-set-fullscreen",
+    "core:window:allow-is-fullscreen"
+  ]
+}

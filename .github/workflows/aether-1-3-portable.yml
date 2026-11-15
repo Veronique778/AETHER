@@ -1,0 +1,30 @@
+name: AETHER-1.3-Portable-Windows
+on:
+  workflow_dispatch:
+  push:
+    tags: ["aether-v1.3*"]
+permissions:
+  contents: read
+jobs:
+  portable:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          architecture: x64
+      - name: Build portable Windows desktop with no Node requirement
+        shell: cmd
+        run: BUILD_PORTABLE_1_3_WINDOWS.bat
+      - name: Read frozen executable smoke report
+        shell: pwsh
+        run: |
+          $r = Get-Content aether_1_3_portable_smoke.json -Raw | ConvertFrom-Json
+          if ($r.status -ne 'pass' -or !$r.frozen -or !$r.frontend -or !$r.ship_model) { throw 'Frozen executable smoke test failed' }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: AETHER-1.3-Windows-Portable
+          path: |
+            dist/AETHER_1_3_PORTABLE/**
+            aether_1_3_portable_smoke.json

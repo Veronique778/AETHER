@@ -1,0 +1,9 @@
+# Build on a real Linux desktop; install apt system libraries first (see BUILD_LINUX.sh).
+pyinstaller>=6.10,<7
+pywebview>=5,<7
+bleak>=1.1,<3
+argon2-cffi>=23.1,<26
+numpy>=1.26,<3
+scipy>=1.11,<2
+pydantic>=2.6,<3
+pytest>=8,<10

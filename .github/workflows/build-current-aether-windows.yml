@@ -1,0 +1,111 @@
+name: Build current AETHER 1.5 Windows Portable
+
+# Build the CURRENT checked-in source in a real Windows environment.
+# It never publishes an untested EXE or silently substitutes an older Portable.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    runs-on: windows-2022
+    timeout-minutes: 90
+    steps:
+      - name: Check out actual current source
+        uses: actions/checkout@v4
+      - name: Install Python 3.13 x64
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          architecture: x64
+          cache: pip
+      - name: Install Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: web/frontend/package-lock.json
+      - name: Build and test React production UI
+        shell: pwsh
+        working-directory: web/frontend
+        run: |
+          $ErrorActionPreference = 'Stop'
+          npm ci
+          if ($LASTEXITCODE -ne 0) { throw 'npm ci failed' }
+          npm run build
+          if ($LASTEXITCODE -ne 0) { throw 'React production build failed' }
+          node scripts/build-release.mjs --out dist
+          if ($LASTEXITCODE -ne 0) { throw 'Content-hashed release assets failed' }
+          npm test
+          if ($LASTEXITCODE -ne 0) { throw 'Frontend unit tests failed' }
+      - name: Install build/test dependencies (real Windows runtime)
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          python -m venv .build-venv-15
+          if ($LASTEXITCODE -ne 0) { throw 'venv failed' }
+          & .build-venv-15/Scripts/python.exe -m pip install --upgrade pip
+          if ($LASTEXITCODE -ne 0) { throw 'pip upgrade failed' }
+          & .build-venv-15/Scripts/python.exe -m pip install --prefer-binary -r requirements-windows-build-1.5.txt
+          if ($LASTEXITCODE -ne 0) { throw 'Build requirements failed' }
+          & .build-venv-15/Scripts/python.exe -c 'import bleak, bleak.backends.winrt.scanner, winrt.windows.devices.radios; import argon2; print("BLE + Argon2 imports OK")'
+          if ($LASTEXITCODE -ne 0) { throw 'BLE/WinRT/Argon2 import failed' }
+      - name: Backend full tests (no test-only Argon2 shim)
+        shell: pwsh
+        working-directory: web/backend
+        run: |
+          $ErrorActionPreference = 'Stop'
+          & ../../.build-venv-15/Scripts/python.exe -m pytest -q tests -p no:cacheprovider -o faulthandler_timeout=600
+          if ($LASTEXITCODE -ne 0) { throw 'Backend tests failed; no release artifact will be published' }
+      - name: Freeze real Windows EXE
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          & .build-venv-15/Scripts/python.exe -m PyInstaller --noconfirm --clean AETHER_1_5_PORTABLE.spec
+          if ($LASTEXITCODE -ne 0) { throw 'PyInstaller failed' }
+          if (!(Test-Path 'dist/AETHER_1_5_PORTABLE/AETHER_1_5.exe')) { throw 'Missing EXE' }
+      - name: Test frozen Windows EXE and Bluetooth imports
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          & dist/AETHER_1_5_PORTABLE/AETHER_1_5.exe --smoke-test --report aether_smoke.json
+          if ($LASTEXITCODE -ne 0) { throw 'Frozen EXE smoke failed' }
+          & dist/AETHER_1_5_PORTABLE/AETHER_1_5.exe --ble-diagnostics --report aether_ble.json
+          if ($LASTEXITCODE -ne 0) { throw 'Frozen BLE diagnostics failed' }
+          & .build-venv-15/Scripts/python.exe -c 'import json; x=json.load(open("aether_smoke.json",encoding="utf-8")); assert str(x.get("status", "")).lower()=="pass" and not x.get("failed"), x'
+          if ($LASTEXITCODE -ne 0) { throw 'Smoke report says FAIL' }
+      - name: Package ONLY the verified current binary
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $name = 'AETHER_1_5_CURRENT_WINDOWS_x64.zip'
+          Compress-Archive -LiteralPath 'dist/AETHER_1_5_PORTABLE' -DestinationPath $name -Force
+          & .build-venv-15/Scripts/python.exe tools/final_release_gate.py --platform windows --archive $name --smoke aether_smoke.json --ble aether_ble.json
+          if ($LASTEXITCODE -ne 0) { throw 'Release gate failed' }
+          Get-FileHash $name -Algorithm SHA256 | Format-List | Out-File -Encoding UTF8 RELEASE_SHA256.txt
+      - name: Downloadable Windows build (after PASS only)
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: AETHER-1.5-CURRENT-Windows-x64
+          path: |
+            AETHER_1_5_CURRENT_WINDOWS_x64.zip
+            RELEASE_SHA256.txt
+            aether_smoke.json
+            aether_ble.json
+            AETHER_1_5_CURRENT_WINDOWS_x64.zip.verification.json
+          retention-days: 14
+      - name: Debug reports if something failed (NOT a release)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: AETHER-Windows-build-failure-logs
+          if-no-files-found: ignore
+          path: |
+            aether_smoke.json
+            aether_ble.json
+            web/frontend/npm-debug.log
+            .build-venv-15/pip.log
+          retention-days: 7

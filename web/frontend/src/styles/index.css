@@ -1,0 +1,264 @@
+@import "tailwindcss";
+
+/*
+ * AETHER design tokens – v0.5 "Mission Control" system (palette from the v0.5 brief).
+ * Dark-first: space black → navy → graphite surfaces, cyan / electric blue / violet / amber accents.
+ * Every text token is ≥ 4.5:1 and every boundary ≥ 3:1 on all surfaces (tests/design.test.ts).
+ * Colour carries meaning only together with an icon or a word.
+ */
+@theme static {
+  --font-sans: "Inter", "Segoe UI", "SF Pro Text", system-ui, -apple-system, Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", ui-monospace, Menlo, Consolas, monospace;
+
+  /* Surfaces – space black → navy → graphite */
+  --color-space: #020812;
+  --color-canvas: #030b17;
+  --color-surface: #081827;
+  --color-raised: #0d2234;
+  --color-overlay: #12293e;
+  --color-line: #15304a;
+  --color-line-strong: #4f7290; /* ≥3:1 vs every surface – control boundaries (WCAG 1.4.11) */
+
+  /* Ink */
+  --color-ink: #f2faff;
+  --color-ink-2: #8da9bc;
+  --color-ink-3: #7592a8;
+
+  /* Accents. teal-* names kept for compatibility: teal-300 = cyan (interactive), teal-600 = selection fill. */
+  --color-cyan: #00e5ff;
+  --color-aqua: #00d6c2;
+  --color-magenta: #ff4fa3;
+  --color-blue: #6ea2ff;
+  --color-violet: #a875ff;
+  --color-amber: #ffbf69;
+  --color-teal-600: #0b6a80;
+  --color-teal-500: #00b8d4;
+  --color-teal-300: #00e5ff;
+  --color-teal-100: #c9f7ff;
+  --color-sage: #9fc8bc;
+
+  /* Status – always paired with an icon and a word */
+  --color-good: #35e6a1;
+  --color-attention: #ffbf69;
+  --color-high: #ff647c;
+  --color-unknown: #7592a8;
+  --color-analysis: #a875ff;
+  --color-missing: #7592a8;
+  --color-calm: #e3d6bd;
+
+  /* Categorical chart series – CVD-validated, fixed order */
+  --color-series-1: #3987e5;
+  --color-series-2: #199e70;
+  --color-series-3: #9a7ae0;
+  --color-series-4: #d55181;
+  --color-series-5: #c98500;
+
+  /* RECOVERY – natural palette */
+  --color-moss-900: #0f1813;
+  --color-moss-800: #16231c;
+  --color-moss-700: #213429;
+  --color-moss-500: #5f8a6f;
+  --color-moss-300: #a9c5b2;
+  --color-sand: #e3d6bd;
+  --color-dusk: #c7b6d9;
+
+  --radius-card: 16px;
+  --shadow-card: 0 1px 0 0 rgb(255 255 255 / 0.04) inset, 0 18px 40px -24px rgb(0 0 0 / 0.8);
+  --ease-out: cubic-bezier(.2, .8, .2, 1);
+}
+
+@layer base {
+  html {
+    font-size: calc(15px * var(--text-scale, 1));
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    color-scheme: dark;
+    overflow-x: clip;
+  }
+  body {
+    margin: 0; min-height: 100vh;
+    background:
+      radial-gradient(1100px 600px at 85% -10%, rgb(0 229 255 / .07), transparent 60%),
+      radial-gradient(900px 600px at -10% 110%, rgb(0 120 200 / .10), transparent 60%),
+      var(--color-canvas);
+    background-attachment: fixed;
+  }
+  ::selection { background: var(--color-teal-600); color: #fff; }
+  :focus-visible {
+    outline: 2px solid var(--color-teal-300);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  button { cursor: pointer; }
+  button:disabled { cursor: not-allowed; }
+  h1, h2, h3, h4 { letter-spacing: -0.01em; line-height: 1.25; }
+  input[type="range"] { accent-color: var(--color-teal-300); }
+  .tabular { font-variant-numeric: tabular-nums; }
+}
+
+@layer components {
+  .card {
+    position: relative;
+    background: linear-gradient(180deg, color-mix(in srgb, var(--color-raised) 82%, transparent), color-mix(in srgb, var(--color-surface) 88%, transparent));
+    border: 1px solid color-mix(in srgb, var(--color-teal-300) 14%, var(--color-line));
+    backdrop-filter: blur(8px);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    animation: aether-in 260ms var(--ease-out) both;
+  }
+  /* Top hairline – a single functional accent that marks panel boundaries on dark stages. */
+  .card::before {
+    content: ""; position: absolute; inset: 0 16px auto 16px; height: 1px; border-radius: 1px;
+    background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--color-teal-300) 35%, transparent), transparent);
+    pointer-events: none;
+  }
+  /* Glass HUD panel used over 3D stages. */
+  .hud {
+    background: color-mix(in srgb, var(--color-surface) 82%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-line-strong) 45%, transparent);
+    border-radius: 14px;
+    backdrop-filter: blur(10px) saturate(1.2);
+    -webkit-backdrop-filter: blur(10px) saturate(1.2);
+    box-shadow: 0 16px 40px -22px rgb(0 0 0 / .9);
+  }
+  .stage {
+    background:
+      radial-gradient(1200px 520px at 50% 45%, rgb(36 72 120 / .35), transparent 70%),
+      radial-gradient(600px 300px at 80% 10%, rgb(110 70 200 / .12), transparent 70%),
+      radial-gradient(1px 1px at 12% 22%, rgb(255 255 255 / .55), transparent),
+      radial-gradient(1px 1px at 72% 66%, rgb(255 255 255 / .45), transparent),
+      radial-gradient(1px 1px at 33% 81%, rgb(255 255 255 / .35), transparent),
+      radial-gradient(1.5px 1.5px at 88% 31%, rgb(200 240 255 / .5), transparent),
+      radial-gradient(1px 1px at 52% 12%, rgb(255 255 255 / .4), transparent),
+      radial-gradient(1px 1px at 6% 64%, rgb(255 255 255 / .35), transparent),
+      var(--color-space);
+  }
+  .glow-hover { transition: border-color 180ms, box-shadow 180ms; }
+  .glow-hover:hover { border-color: color-mix(in srgb, var(--color-teal-300) 45%, var(--color-line)); box-shadow: 0 0 0 1px rgb(0 229 255 / .08), 0 0 24px -8px rgb(0 229 255 / .35); }
+  .page-enter { animation: aether-in 320ms var(--ease-out) both; }
+  .interactive { transition: transform 160ms var(--ease-out), border-color 160ms, background-color 160ms, box-shadow 160ms; }
+  .interactive:hover { transform: translateY(-1px); border-color: color-mix(in srgb, var(--color-teal-300) 55%, var(--color-line)); }
+  .interactive:active { transform: translateY(0); }
+  .skeleton { position: relative; overflow: hidden; background: var(--color-raised); border-radius: 10px; }
+  .skeleton::after { content: ""; position: absolute; inset: 0; transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, rgb(255 255 255 / .05), transparent); animation: aether-shimmer 1.4s infinite; }
+  .mono-label { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; color: var(--color-ink-3); }
+  .eyebrow {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--color-ink-3);
+  }
+  .field {
+    width: 100%;
+    background: var(--color-canvas);
+    border: 1px solid var(--color-line-strong);
+    border-radius: 10px;
+    padding: 0.5rem 0.7rem;
+    color: var(--color-ink);
+    font-variant-numeric: tabular-nums;
+  }
+  .field[aria-invalid="true"] { border-color: var(--color-high); }
+  .theme-recovery {
+    --color-surface: #13201a;
+    --color-raised: #1a2a22;
+    --color-line: #2a3d32;
+    --color-line-strong: #5d7a68;
+    --color-canvas: #0d1612;
+    --color-teal-300: #9cc9ad;
+    --color-teal-600: #4d7a60;
+    --color-calm: #e3d6bd;
+  }
+}
+
+body.aether-account-page #aether-nasa-launch { display: none; }
+
+@keyframes aether-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+@keyframes aether-shimmer { to { transform: translateX(100%); } }
+@keyframes aether-pulse { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
+@keyframes aether-ring { from { transform: scale(.6); opacity: .9; } to { transform: scale(1.6); opacity: 0; } }
+@keyframes aether-flow { to { stroke-dashoffset: -24; } }
+@keyframes aether-breathe { 0%, 100% { transform: scale(.72); opacity: .75; } 40% { transform: scale(1); opacity: 1; } }
+@keyframes aether-drift { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
+.flow-dash { stroke-dasharray: 4 8; animation: aether-flow 1.1s linear infinite; }
+.breathe-orb { animation: aether-breathe var(--breath, 10s) ease-in-out infinite; transform-origin: center; }
+
+/* Reduced motion: honour the OS preference and the in-app toggle. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; scroll-behavior: auto !important; }
+}
+.reduce-motion *, .reduce-motion *::before, .reduce-motion *::after {
+  animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important;
+}
+
+@media print {
+  .no-print { display: none !important; }
+  html, body { background: #fff; color: #000; }
+  .card { box-shadow: none; border-color: #999; background: #fff; }
+}
+
+/*
+ * LIGHT (day) display mode – positive polarity. Evidence: dark-on-light text gives better
+ * proofreading / small-text legibility (Piepenbrock, Mayr & Buchner 2014). Recommended
+ * under normal cabin lighting; the dark mode stays default for dim / pre-sleep lighting.
+ * Unlayered, so it overrides the @theme variables. 3D viewports intentionally stay dark.
+ */
+.theme-light {
+  color-scheme: light;
+  --color-canvas: #f3f5f7;
+  --color-surface: #ffffff;
+  --color-raised: #eef2f5;
+  --color-overlay: #ffffff;
+  --color-line: #d6dee5;
+  --color-line-strong: #748596;
+  --color-ink: #101827;
+  --color-ink-2: #34465a;
+  --color-ink-3: #526478;
+  --color-teal-600: #277f89;
+  --color-teal-500: #1f6b74;
+  --color-teal-300: #1c626a;
+  --color-teal-100: #134a50;
+  --color-sage: #3f6b60;
+  --color-good: #2c7552;
+  --color-attention: #8a5a12;
+  --color-high: #b03a2b;
+  --color-unknown: #526478;
+  --color-analysis: #6247b0;
+  --color-missing: #526478;
+  --color-calm: #4b3f22;
+  --color-cyan: #1c626a;
+  --color-blue: #2556b8;
+  --color-series-5: #9a6400;
+  --color-aqua: #00796d;
+  --color-magenta: #b0246a;
+  --color-violet: #6247b0;
+  --color-amber: #8a5a12;
+  --color-space: #e9eef3;
+  --shadow-card: 0 1px 2px rgb(16 24 39 / 0.06), 0 6px 18px -10px rgb(16 24 39 / 0.18);
+}
+.theme-light .theme-recovery {
+  --color-canvas: #f1efe7;
+  --color-surface: #fbfaf5;
+  --color-raised: #ebe7da;
+  --color-line: #d8d2bf;
+  --color-line-strong: #b5ad94;
+  --color-teal-300: #3b6b4d;
+  --color-teal-600: #4d7a60;
+  --color-calm: #3f3420;
+}
+/* Recovery canvases/activity surfaces keep their own dark natural palette in both modes. */
+.always-dark { color-scheme: dark; }
+
+/* Capacitor safe areas and small-screen scroll handling (AETHER mobile). */
+html[data-aether-mobile="true"] { overscroll-behavior-y: none; }
+html[data-aether-mobile="true"] body { min-width: 0; -webkit-tap-highlight-color: transparent; }
+html[data-aether-mobile="true"] #root { min-height: 100dvh; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); }
+html[data-aether-mobile="true"] button, html[data-aether-mobile="true"] a { touch-action: manipulation; }
+@media (max-width: 600px) {
+  html[data-aether-mobile="true"] { font-size: 14px; }
+  html[data-aether-mobile="true"] canvas { max-width: 100%; }
+}

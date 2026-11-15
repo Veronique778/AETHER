@@ -1,0 +1,8 @@
+# Runtime of the bundled backend (same as web/backend/requirements.txt, minus test tools) + packager.
+fastapi>=0.110,<1.0
+uvicorn>=0.28,<1.0
+pydantic>=2.6,<3.0
+# v0.8: Mission Systems engine (MILP crew scheduler via scipy.optimize.milp / HiGHS)
+numpy>=1.26,<3.0
+scipy>=1.11,<2.0
+pyinstaller>=6.6,<7.0

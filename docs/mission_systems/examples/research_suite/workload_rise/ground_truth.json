@@ -1,0 +1,1540 @@
+[
+  {
+    "sample_id": "f33d1d68e395a46283047f56",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 0,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "20b5d7130971f5b2b8495866",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 0,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "2ec292a826f2f2c0899a4c20",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 0,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "e8214d100d013e4344f70253",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 30,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "fc44ab7b1282326435fec136",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 30,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "4620e4866b92850e7d9e7a00",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 30,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "de06c6ef01607a9390225855",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 60,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "b9e2b8b30bbbe56a9d70a4b7",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 60,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "c7dbc25baa21055a3355398e",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 60,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "77d24e40de379c1325653c70",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 90,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "12f3cdc31a08ab8fb081ba77",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 90,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "3b1346ef121612df8f0eadfc",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 90,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "642c50f640815622934aa6a4",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 120,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "5741e4eb5a37fedb048dea3d",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 120,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "0064e39547d9e8e95ae1b14d",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 120,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "5ec951f08f62e03f3678fd61",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 150,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "88eb193ed3b1fd4261e0d364",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 150,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "677721a8b2e7dd7016fc1287",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 150,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "06ee58051295e3c043d51ffc",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 180,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "dac3c35738fc62b159f5413c",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 180,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "ba39e4e57fcf31772246c6e1",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 180,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "2cea8d01b041d8bc1ba41c2b",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 210,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "4aaf8ee60790cdc58d9a4205",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 210,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "c1025732dd30309bfd408727",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 210,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "b17a9e660702bf1c925de658",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 240,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "fe909fc769a8531341af5ed9",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 240,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "b35d1aa9ffb24ab03242ed99",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 240,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "036e6cc88729c558bbcbb8b5",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 270,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "520a25717814f667aac2038f",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 270,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "3b48b7c6acaa04c73df2d849",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 270,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "4fa5790ab440aed02fdab9f2",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 300,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "40dbc97321f507fdc674d55e",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 300,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "70b6a1a7227a7a29ac321d1e",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 300,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "58a501322c5106d6b7efa8d9",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 330,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "dde31c842e5757a333d6bbbd",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 330,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "edf5a18142475ba3577aeb17",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 330,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "2ecec24473cb395a2b762bc4",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 360,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "91f4d1611c1e14763fe7c0c9",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 360,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "36656680070f7ca28dbf1687",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 360,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "8f2e24f5720cc6bd56edec0f",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 390,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "064e878c96c9816f6c972aad",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 390,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "5a851c8afd507261aaf261d7",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 390,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "1f82d8d3bb4f52781885053b",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 420,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "a735963cd7426280616904fe",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 420,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "75c8bd4754508e213a689d48",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 420,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "d8744eec795643c7735a35b9",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 450,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "2718fee42b1ef3bb66a457b8",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 450,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "d0e6120b3de01a0a4a90bbb2",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 450,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "8f82f7354d5aee1c49cc2d52",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 480,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "42e0f2d1ee1dce6783bd952e",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 480,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "072806c0989a3c4a219b613d",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 480,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "5c70de638d3599bb648a850f",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 510,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "201533206a78e5d150a7cce7",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 510,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "5be4e7e42726e52607612195",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 510,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "0bb0bf7efa61c8f69204da8d",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 540,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "156e30dcdb77a692659167ad",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 540,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "4c28a0ec7deab6da9617cdd9",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 540,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "9825c098b85275d61f8d036e",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 570,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "8a2bf3127bf10c5952c5b970",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 570,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "487b6db16d05d25c9fdb4d54",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 570,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "6aeb8ea4f0ef1c287007fcf5",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 600,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "d78ef69bb50cf822985f24b0",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 600,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "8bbf033ab1b9c13925c4fe2e",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 600,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "c65381e04552a896b60d8956",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 630,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "84c44c26f8f96a329408cf6c",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 630,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "b22dcbc2cdc1db8c777f7c66",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 630,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "6d802307c251b7e9d114fc0c",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 660,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "a8b56c89f7c8be8220f4cdec",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 660,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "8091e8940f28233d951a5128",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 660,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "ef0e7e3c701152b550a74df3",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 690,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "53968556837facdd3c702647",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 690,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "c9a1825d1faca7bf43f9a248",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 690,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "5e26929169230222cc4ba35a",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 720,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "c268e5b39a21db0f23e97dee",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 720,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "87341460fd7382c390662314",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 720,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "0ae079a96957b9a9dffa67ea",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 750,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "ba55f83e78a5963deabddd95",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 750,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "74c1dcf2a27458468f38b682",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 750,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "36e001b57877496e8ac9865d",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 780,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "2aeb671d034ec9a738eb735f",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 780,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "8b037bf2523509f6fe045b2d",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 780,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "de21bff09a431f9e51fcaa2e",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 810,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "2b72a50b93a0546cbd2c1ae0",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 810,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "0cd88de9cc56a602de113127",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 810,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "fe09af8165fa92c8bbe72c7f",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 840,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "b885f1b6881e8ceddfb1bb00",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 840,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "e998fa996e647cd51de3d71e",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 840,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "a2c1ea7c0327a3d928a2505b",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 870,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "b0d3471f4bf3e3e7d71b4703",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 870,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "f0bea6381ae0a8f90c8e0041",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 870,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "a0355c60048725e8a2326e2c",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 900,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "94dd9bef521cbd3c76a3632b",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 900,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "a6a4ae8108b4aa2c9a758938",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 900,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "94fbb30e74e345160d22e57c",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 930,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "16117cdc3ccbe5dd9e196982",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 930,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "5732c89d888c006abe30fef5",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 930,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "f9314acdd00b6bf6db842569",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 960,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "3f003d5ca1c14960a090ee94",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 960,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "dd91a1b8e1523c7b1068e330",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 960,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "a6306a96bad59b79c097a467",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 990,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "cbf6e963a7e504d153ead686",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 990,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "888dcc6dcc968512fca16fb9",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 990,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "a73def13d030a41320025e5c",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 1020,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "efba02f167eeb8d3728a7922",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 1020,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "518608f59d1556dc16e34720",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 1020,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "5849e0acbcf7bd6d1e27e8a0",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 1050,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "04c92ee5eafca052dc943e24",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 1050,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "e615e289badd8dba10e6b875",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 1050,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "d635a0f49b94ec6fce5c9eab",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 1080,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "05ac5c889054d9e1d332fbf5",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 1080,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "e71309f9c0218e86acb6721b",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 1080,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "30df14577c2641f49b8a1557",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 1110,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "4fd0fca1ce0ecec9a251b7d9",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 1110,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "34446e6b366306b27b1938e3",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 1110,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "ae6810e462f4caf29bf67efe",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 1140,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "e984506131b16845bada773b",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 1140,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "71be14eaf55203bd00b315f9",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 1140,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "79d92d37b85ac66a5930df40",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 1170,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "0ed9bc0d55953dbd04946c23",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 1170,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "e164660cbae8b75116b028fa",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 1170,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "686ae97aa3737f5d61e2e35c",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 1200,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "2e151bd26e95e75bfe4bacd7",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 1200,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "2e72457ae876de27c5439086",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 1200,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "0a4afe01155bab43ec5be386",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 1230,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "1f5d6450d5b5762f7210d9d2",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 1230,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "886805e1d537f7e82354dfdd",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 1230,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "02cda966c3570e6108bfc9c6",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 1260,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "0b1730a153b432cf2c818e35",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 1260,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "3e6b36f0791eb655866393b0",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 1260,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "cd8232314180c4b43e5f641a",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 1290,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "13a574dda8bcf2a1565bc2db",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 1290,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "dfa8c6f82f28c1b9a61fe93b",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 1290,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "8cc91438bd16a51037c2f6f8",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 1320,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "9e8059d71115b660459d2ac9",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 1320,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "0b7fce4019a4a64728b79216",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 1320,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "df7a1e593b230093ae434103",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 1350,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "96010545ad440b26eceba3fc",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 1350,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "6a8a4623ced0cae0d9d2f8db",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 1350,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "8f56043ef7fc810d36e096f8",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 1380,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "66e93957aee52e25071ed6bd",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 1380,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "c12bcc091b9dbd2e8c6fd79a",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 1380,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "469a4f16fd89363de5ab5c86",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 1410,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "1d1a32b116bb023d39c1389b",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 1410,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "3370615b3edc7ddc93156f58",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 1410,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "c45d746223ce109f9dc43574",
+    "anomaly": true,
+    "injected_changes": [
+      "workload_rise"
+    ],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 1,
+    "minute": 1440,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "a85ed46a086903b9a60c465a",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 2,
+    "minute": 1440,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  },
+  {
+    "sample_id": "d105939828dd0548fe9570c1",
+    "anomaly": false,
+    "injected_changes": [],
+    "missing_metrics": [],
+    "invalid_metrics": [],
+    "crew_id": 3,
+    "minute": 1440,
+    "definition": "Injected event strength >= 0.25; not a clinical diagnosis."
+  }
+]

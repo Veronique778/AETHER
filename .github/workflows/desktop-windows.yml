@@ -1,0 +1,50 @@
+# Builds and smoke-tests the AETHER Windows desktop app (Tauri 2 + PyInstaller sidecar).
+name: desktop-windows
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Backend + sidecar environment
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r desktop/backend/requirements-desktop.txt pytest httpx
+      - name: Backend tests (unchanged backend)
+        working-directory: web/backend
+        run: python -m pytest -q
+      - name: Frontend checks
+        working-directory: web/frontend
+        run: |
+          npm install
+          npm run typecheck
+          npm test
+      - name: Package backend sidecar
+        working-directory: desktop
+        run: |
+          npm install
+          npm run build:backend
+      - name: Sidecar lifecycle tests against the packaged exe
+        shell: pwsh
+        run: |
+          $exe = Get-ChildItem desktop/src-tauri/binaries/aether-backend-*.exe | Select-Object -First 1
+          $env:AETHER_SIDECAR = $exe.FullName
+          python -m pytest desktop/tests -q
+      - name: Tauri build (exe, MSI, NSIS)
+        working-directory: desktop
+        run: npx tauri build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: AETHER-0.8.0-windows-x64
+          path: |
+            desktop/src-tauri/target/release/aether-desktop.exe
+            desktop/src-tauri/target/release/bundle/msi/*.msi
+            desktop/src-tauri/target/release/bundle/nsis/*.exe

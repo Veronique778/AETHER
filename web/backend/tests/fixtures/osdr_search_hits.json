@@ -1,0 +1,41 @@
+{
+ "_fixture_note": "Shape of an OSDR search hit (keys as returned by /osdr/data/search, observed 2026-11-14). Values for OSD-575 summarised from OSDR/npj Microgravity 2024 (doi:10.1038/s41526-024-00393-5); title paraphrased.",
+ "hits": {
+  "hits": [
+   {
+    "_source": {
+     "Accession": "OSD-575",
+     "Study Title": "SpaceX Inspiration4 serum comprehensive metabolic panel and multiplex immunoassays (fixture title)",
+     "organism": "Homo sapiens",
+     "Material Type": "Serum",
+     "Study Assay Measurement Type": "Comprehensive Metabolic Panel; Immunoassay",
+     "Study Assay Technology Type": "Clinical chemistry analyzer; Multiplex immunoassay",
+     "Mission": {
+      "Name": "SpaceX Inspiration4"
+     },
+     "Project Identifier": "Inspiration4 Crew",
+     "Study Public Release Date": "(not transcribed)"
+    }
+   },
+   {
+    "_source": {
+     "Accession": "OSD-48",
+     "Study Title": "Rodent Research-1 mouse liver (fixture)",
+     "organism": "Mus musculus",
+     "Material Type": "Liver",
+     "Study Assay Measurement Type": "transcription profiling",
+     "Study Assay Technology Type": "RNA Sequencing (RNA-Seq)"
+    }
+   },
+   {
+    "_source": {
+     "Accession": "OSD-572",
+     "Study Title": "Inspiration4 microbial swabs (fixture)",
+     "organism": "Microbiota",
+     "Material Type": "Swab",
+     "Study Assay Measurement Type": "Metagenomic sequencing"
+    }
+   }
+  ]
+ }
+}

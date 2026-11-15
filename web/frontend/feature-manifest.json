@@ -1,0 +1,49 @@
+{
+  "_doc": "Release feature markers (AETHER 1.5 BLE personal). scripts/build-offline.mjs refuses to finish a build whose output lacks any marker; tests/test_frontend_build_integrity.py re-checks the committed bundle. Add a marker whenever a release feature is added. 1.5: the legacy sensor-bridge / Data Lab scripts are no longer loaded by index.html (the desktop serves dist/ from scripts/build-release.mjs or Vite); they remain as public/ files.",
+  "release": "1.5.0",
+  "files": {
+    "aether-nasa-data-lab.js": [
+      "AETHER NASA Data Lab 1.4",
+      "/api/nasa/verified-csv",
+      "/api/nasa/imports",
+      "/api/nasa/local-csv",
+      "aether-nasa-history",
+      "aether-nasa-verified-run",
+      "aether-nasa-verified-label-column",
+      "SHA-256",
+      "Preprocessing history",
+      "data-evidence-class",
+      "data-aether-provenance-legend",
+      "X-AETHER-Token"
+    ],
+    "aether-sensor-bridge.js": [
+      "AETHER 1.4",
+      "X-AETHER-Token",
+      "/api/biosignals/sensor/status"
+    ],
+    "index.html": [
+      "Real Biosignal Intelligence",
+      "Bluetooth Heart Rate Service",
+      "DEMO MODE",
+      "Create simulated DEMO recording",
+      "Data connectors",
+      "NASA OSDR human reference data",
+      "/api/nasa/reference-context",
+      "aether-session-token",
+      "X-AETHER-Token",
+      "Open Live Sensors · Bluetooth HRS",
+      "Scan HRS monitors",
+      "Test with simulated HRS",
+      "/api/devices/ble-diagnostics",
+      "Run personal PHANTOM"
+    ]
+  },
+  "required_assets": [
+    "models/anatom.glb",
+    "models/carablik.glb",
+    "models/cosmo11.glb",
+    "models/cosmo11_lite.glb",
+    "models/meza.glb",
+    "models/skeleton.glb"
+  ]
+}

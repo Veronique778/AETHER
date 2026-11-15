@@ -1,0 +1,179 @@
+{
+  "crew_id": "DEMO-01",
+  "algorithm": "robust_mad_v1",
+  "research_only": true,
+  "alerts": [
+    {
+      "type": "single_metric",
+      "metric": "resting_hr",
+      "evidence": {
+        "last": 81.619,
+        "robust_deviation": 4.945,
+        "baseline": 71.0745
+      },
+      "explanation": "Latest value differs from personal historical median in a concerning direction; verify measurement and context."
+    },
+    {
+      "type": "single_metric",
+      "metric": "sleep_hours",
+      "evidence": {
+        "last": 5.458,
+        "robust_deviation": 4.326,
+        "baseline": 7.7125
+      },
+      "explanation": "Latest value differs from personal historical median in a concerning direction; verify measurement and context."
+    },
+    {
+      "type": "single_metric",
+      "metric": "fatigue",
+      "evidence": {
+        "last": 7.331,
+        "robust_deviation": 6.866,
+        "baseline": 2.582
+      },
+      "explanation": "Latest value differs from personal historical median in a concerning direction; verify measurement and context."
+    },
+    {
+      "type": "single_metric",
+      "metric": "reaction_ms",
+      "evidence": {
+        "last": 357.512,
+        "robust_deviation": 4.8,
+        "baseline": 262.862
+      },
+      "explanation": "Latest value differs from personal historical median in a concerning direction; verify measurement and context."
+    },
+    {
+      "type": "multifactor",
+      "metrics": [
+        "resting_hr",
+        "sleep_hours",
+        "fatigue",
+        "reaction_ms"
+      ],
+      "explanation": "Several indicators changed together relative to personal history; not a diagnosis."
+    }
+  ],
+  "baselines": {
+    "resting_hr": {
+      "metric": "resting_hr",
+      "status": "ok",
+      "count": 20,
+      "median": 71.0745,
+      "mad": 1.150500000000001,
+      "context": null
+    },
+    "sleep_hours": {
+      "metric": "sleep_hours",
+      "status": "ok",
+      "count": 20,
+      "median": 7.7125,
+      "mad": 0.3514999999999997,
+      "context": null
+    },
+    "fatigue": {
+      "metric": "fatigue",
+      "status": "ok",
+      "count": 20,
+      "median": 2.582,
+      "mad": 0.4664999999999999,
+      "context": null
+    },
+    "reaction_ms": {
+      "metric": "reaction_ms",
+      "status": "ok",
+      "count": 20,
+      "median": 262.862,
+      "mad": 13.3005,
+      "context": null
+    }
+  },
+  "trends": {
+    "resting_hr": {
+      "status": "ok",
+      "previous_mean": 72.28699999999999,
+      "recent_mean": 77.27,
+      "delta": 4.983000000000004,
+      "direction": "up"
+    },
+    "sleep_hours": {
+      "status": "ok",
+      "previous_mean": 7.678,
+      "recent_mean": 6.0680000000000005,
+      "delta": -1.6099999999999994,
+      "direction": "down"
+    },
+    "fatigue": {
+      "status": "ok",
+      "previous_mean": 3.2736666666666667,
+      "recent_mean": 5.2973333333333334,
+      "delta": 2.0236666666666667,
+      "direction": "up"
+    },
+    "reaction_ms": {
+      "status": "ok",
+      "previous_mean": 274.2366666666667,
+      "recent_mean": 342.6666666666667,
+      "delta": 68.43,
+      "direction": "up"
+    }
+  },
+  "threshold_comparison": {
+    "resting_hr": false,
+    "sleep_hours": false,
+    "fatigue": false,
+    "reaction_ms": false
+  },
+  "required_metrics": [
+    "resting_hr",
+    "sleep_hours",
+    "fatigue",
+    "reaction_ms",
+    "activity_minutes"
+  ],
+  "latest_evidence": {
+    "resting_hr": {
+      "last": 81.619,
+      "robust_deviation": 4.945,
+      "baseline": 71.0745
+    },
+    "sleep_hours": {
+      "last": 5.458,
+      "robust_deviation": 4.326,
+      "baseline": 7.7125
+    },
+    "fatigue": {
+      "last": 7.331,
+      "robust_deviation": 6.866,
+      "baseline": 2.582
+    },
+    "reaction_ms": {
+      "last": 357.512,
+      "robust_deviation": 4.8,
+      "baseline": 262.862
+    }
+  },
+  "uncertainty": {
+    "data_coverage": 1.0,
+    "missing_metrics": [],
+    "model_uncertainty": "not_calibrated",
+    "confidence_probability": null,
+    "status": "coverage_complete"
+  },
+  "suggested_measurements": [],
+  "status": "review_pattern",
+  "analyzed_at": "2026-11-13T09:50:25.935459+00:00",
+  "period": {
+    "from": "2026-10-01T00:00:00+00:00",
+    "to": "2026-10-21T00:00:00+00:00"
+  },
+  "source_ids": [
+    "AETHER_SYNTHETIC_V1"
+  ],
+  "limitations": [
+    "Research demonstration only",
+    "No medical diagnosis",
+    "No calibrated probabilities",
+    "Synthetic evaluation does not establish real-world accuracy"
+  ]
+}

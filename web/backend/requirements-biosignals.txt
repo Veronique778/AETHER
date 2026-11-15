@@ -1,0 +1,2 @@
+# Optional live-sensor runtime; install with standard CPython 3.13 wheels.
+bleak>=1.1,<3

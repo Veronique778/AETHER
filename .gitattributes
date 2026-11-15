@@ -1,0 +1,9 @@
+# AETHER 1.4: keep frontend sources and the committed bundle byte-exact on every OS
+# (tests/test_frontend_build_integrity.py hashes them).
+web/frontend/src/** -text
+web/frontend/public/** -text
+web/frontend/dist-offline/** -text
+web/frontend/index.html -text
+web/frontend/feature-manifest.json -text
+*.glb binary
+*.bat text eol=crlf

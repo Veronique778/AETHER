@@ -1,0 +1,211 @@
+{
+  "normal": {
+    "threshold": {
+      "tp": 0,
+      "fp": 0,
+      "tn": 147,
+      "fn": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "abstained": 0,
+      "coverage": 1.0,
+      "definition": "Per crew/time sample. Missing/abstaining predictions count as no alert; missed positive labels count as FN.",
+      "limitation": "Scores measure detection of injected synthetic events, not clinical accuracy."
+    },
+    "phantom": null,
+    "phantom_status": "not_connected",
+    "model_version": "educational-1.0",
+    "seed": 67
+  },
+  "sleep_loss": {
+    "threshold": {
+      "tp": 0,
+      "fp": 0,
+      "tn": 113,
+      "fn": 34,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0,
+      "abstained": 0,
+      "coverage": 1.0,
+      "definition": "Per crew/time sample. Missing/abstaining predictions count as no alert; missed positive labels count as FN.",
+      "limitation": "Scores measure detection of injected synthetic events, not clinical accuracy."
+    },
+    "phantom": null,
+    "phantom_status": "not_connected",
+    "model_version": "educational-1.0",
+    "seed": 67
+  },
+  "fatigue_rise": {
+    "threshold": {
+      "tp": 0,
+      "fp": 0,
+      "tn": 113,
+      "fn": 34,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0,
+      "abstained": 0,
+      "coverage": 1.0,
+      "definition": "Per crew/time sample. Missing/abstaining predictions count as no alert; missed positive labels count as FN.",
+      "limitation": "Scores measure detection of injected synthetic events, not clinical accuracy."
+    },
+    "phantom": null,
+    "phantom_status": "not_connected",
+    "model_version": "educational-1.0",
+    "seed": 67
+  },
+  "pulse_shift": {
+    "threshold": {
+      "tp": 0,
+      "fp": 0,
+      "tn": 113,
+      "fn": 34,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0,
+      "abstained": 0,
+      "coverage": 1.0,
+      "definition": "Per crew/time sample. Missing/abstaining predictions count as no alert; missed positive labels count as FN.",
+      "limitation": "Scores measure detection of injected synthetic events, not clinical accuracy."
+    },
+    "phantom": null,
+    "phantom_status": "not_connected",
+    "model_version": "educational-1.0",
+    "seed": 67
+  },
+  "cognitive_decline": {
+    "threshold": {
+      "tp": 0,
+      "fp": 0,
+      "tn": 113,
+      "fn": 34,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0,
+      "abstained": 0,
+      "coverage": 1.0,
+      "definition": "Per crew/time sample. Missing/abstaining predictions count as no alert; missed positive labels count as FN.",
+      "limitation": "Scores measure detection of injected synthetic events, not clinical accuracy."
+    },
+    "phantom": null,
+    "phantom_status": "not_connected",
+    "model_version": "educational-1.0",
+    "seed": 67
+  },
+  "workload_rise": {
+    "threshold": {
+      "tp": 0,
+      "fp": 0,
+      "tn": 113,
+      "fn": 34,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0,
+      "abstained": 0,
+      "coverage": 1.0,
+      "definition": "Per crew/time sample. Missing/abstaining predictions count as no alert; missed positive labels count as FN.",
+      "limitation": "Scores measure detection of injected synthetic events, not clinical accuracy."
+    },
+    "phantom": null,
+    "phantom_status": "not_connected",
+    "model_version": "educational-1.0",
+    "seed": 67
+  },
+  "environment": {
+    "threshold": {
+      "tp": 0,
+      "fp": 0,
+      "tn": 45,
+      "fn": 102,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0,
+      "abstained": 0,
+      "coverage": 1.0,
+      "definition": "Per crew/time sample. Missing/abstaining predictions count as no alert; missed positive labels count as FN.",
+      "limitation": "Scores measure detection of injected synthetic events, not clinical accuracy."
+    },
+    "phantom": null,
+    "phantom_status": "not_connected",
+    "model_version": "educational-1.0",
+    "seed": 67
+  },
+  "multifactor": {
+    "threshold": {
+      "tp": 25,
+      "fp": 0,
+      "tn": 113,
+      "fn": 9,
+      "precision": 1.0,
+      "recall": 0.7352941176470589,
+      "f1": 0.847457627118644,
+      "abstained": 0,
+      "coverage": 1.0,
+      "definition": "Per crew/time sample. Missing/abstaining predictions count as no alert; missed positive labels count as FN.",
+      "limitation": "Scores measure detection of injected synthetic events, not clinical accuracy."
+    },
+    "phantom": null,
+    "phantom_status": "not_connected",
+    "model_version": "educational-1.0",
+    "seed": 67
+  },
+  "missing": {
+    "threshold": {
+      "tp": 0,
+      "fp": 0,
+      "tn": 147,
+      "fn": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "abstained": 0,
+      "coverage": 1.0,
+      "definition": "Per crew/time sample. Missing/abstaining predictions count as no alert; missed positive labels count as FN.",
+      "limitation": "Scores measure detection of injected synthetic events, not clinical accuracy."
+    },
+    "phantom": null,
+    "phantom_status": "not_connected",
+    "model_version": "educational-1.0",
+    "seed": 67
+  },
+  "corrupt": {
+    "threshold": {
+      "tp": 0,
+      "fp": 0,
+      "tn": 147,
+      "fn": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "abstained": 0,
+      "coverage": 1.0,
+      "definition": "Per crew/time sample. Missing/abstaining predictions count as no alert; missed positive labels count as FN.",
+      "limitation": "Scores measure detection of injected synthetic events, not clinical accuracy."
+    },
+    "phantom": null,
+    "phantom_status": "not_connected",
+    "model_version": "educational-1.0",
+    "seed": 67
+  },
+  "noise": {
+    "threshold": {
+      "tp": 0,
+      "fp": 0,
+      "tn": 147,
+      "fn": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "abstained": 0,
+      "coverage": 1.0,
+      "definition": "Per crew/time sample. Missing/abstaining predictions count as no alert; missed positive labels count as FN.",
+      "limitation": "Scores measure detection of injected synthetic events, not clinical accuracy."
+    },
+    "phantom": null,
+    "phantom_status": "not_connected",
+    "model_version": "educational-1.0",
+    "seed": 67
+  }
+}

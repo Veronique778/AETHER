@@ -1,0 +1,73 @@
+{
+ "_fixture_note": "File-catalog entries for OSD-575 transcribed from https://osdr.nasa.gov/osdr/data/osd/files/575 on 2026-11-14. Metadata only - no measurement values. Used to test catalog parsing offline.",
+ "success": true,
+ "studies": {
+  "OSD-575": {
+   "study_files": [
+    {
+     "file_name": "OSD-575_metadata_OSD-575-ISA.zip",
+     "category": "Study Metadata Files",
+     "file_size": 71702,
+     "restricted": false,
+     "remote_url": "/geode-py/ws/studies/OSD-575/download?source=datamanager&file=OSD-575_metadata_OSD-575-ISA.zip"
+    },
+    {
+     "file_name": "LSDS-8_Comprehensive_Metabolic_Panel_CMP.upload_SUBMITTED.csv",
+     "category": "Comprehensive Metabolic Panel",
+     "file_size": 25275,
+     "restricted": false,
+     "remote_url": "/geode-py/ws/studies/OSD-575/download?source=datamanager&file=LSDS-8_Comprehensive_Metabolic_Panel_CMP.upload_SUBMITTED.csv"
+    },
+    {
+     "file_name": "LSDS-8_Multiplex_serum.immune.EvePanel_SUBMITTED.csv",
+     "category": "Immunoassay",
+     "file_size": 107418,
+     "restricted": false,
+     "remote_url": "/geode-py/ws/studies/OSD-575/download?source=datamanager&file=LSDS-8_Multiplex_serum.immune.EvePanel_SUBMITTED.csv"
+    },
+    {
+     "file_name": "LSDS-8_Multiplex_serum.cardiovascular.EvePanel_SUBMITTED.csv",
+     "category": "Immunoassay",
+     "file_size": 15241,
+     "restricted": false,
+     "remote_url": "/geode-py/ws/studies/OSD-575/download?source=datamanager&file=LSDS-8_Multiplex_serum.cardiovascular.EvePanel_SUBMITTED.csv"
+    },
+    {
+     "file_name": "LSDS-8_Multiplex_serum.immune.AlamarPanel_SUBMITTED.xlsx",
+     "category": "Immunoassay",
+     "file_size": 322799,
+     "restricted": false,
+     "remote_url": "/geode-py/ws/studies/OSD-575/download?source=datamanager&file=LSDS-8_Multiplex_serum.immune.AlamarPanel_SUBMITTED.xlsx"
+    },
+    {
+     "file_name": "LSDS-8_Multiplex_serum_immune_EvePanel_TRANSFORMED.csv",
+     "category": "Immunoassay",
+     "file_size": 41214,
+     "restricted": false,
+     "remote_url": "/geode-py/ws/studies/OSD-575/download?source=datamanager&file=LSDS-8_Multiplex_serum_immune_EvePanel_TRANSFORMED.csv"
+    },
+    {
+     "file_name": "LSDS-8_Multiplex_serum_cardiovascular_EvePanel_TRANSFORMED.csv",
+     "category": "Immunoassay",
+     "file_size": 6207,
+     "restricted": false,
+     "remote_url": "/geode-py/ws/studies/OSD-575/download?source=datamanager&file=LSDS-8_Multiplex_serum_cardiovascular_EvePanel_TRANSFORMED.csv"
+    },
+    {
+     "file_name": "LSDS-8_Multiplex_serum.immune.AlamarPanel_TRANSFORMED.csv",
+     "category": "Immunoassay",
+     "file_size": 141783,
+     "restricted": false,
+     "remote_url": "/geode-py/ws/studies/OSD-575/download?source=datamanager&file=LSDS-8_Multiplex_serum.immune.AlamarPanel_TRANSFORMED.csv"
+    },
+    {
+     "file_name": "LSDS-8_Comprehensive_Metabolic_Panel_CMP_TRANSFORMED.csv",
+     "category": "Comprehensive Metabolic Panel",
+     "file_size": 8506,
+     "restricted": false,
+     "remote_url": "/geode-py/ws/studies/OSD-575/download?source=datamanager&file=LSDS-8_Comprehensive_Metabolic_Panel_CMP_TRANSFORMED.csv"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,4 @@
+# Optional extensions; core human-systems demo uses Python standard library only
+fastapi>=0.115
+uvicorn>=0.30
+# scipy, pandas, scikit-learn, networkx may be added after evaluation; not required for this version

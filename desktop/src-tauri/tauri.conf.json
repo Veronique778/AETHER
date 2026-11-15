@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "AETHER",
+  "version": "1.0.0",
+  "identifier": "space.aether.desktop",
+  "build": {
+    "frontendDist": "../dist",
+    "beforeBuildCommand": "npm run build:frontend"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [],
+    "security": {
+      "csp": {
+        "default-src": "'self'",
+        "script-src": "'self'",
+        "style-src": "'self' 'unsafe-inline'",
+        "img-src": "'self' data: blob:",
+        "font-src": "'self' data:",
+        "connect-src": "'self' ipc: http://ipc.localhost http://127.0.0.1:*",
+        "media-src": "'self' blob:",
+        "object-src": "'none'",
+        "base-uri": "'self'",
+        "frame-ancestors": "'none'"
+      }
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["msi", "nsis"],
+    "publisher": "AETHER team",
+    "copyright": "AETHER research prototype – synthetic data only",
+    "category": "Education",
+    "shortDescription": "Adaptive Ecosystem for Human Exploration and Resilience",
+    "longDescription": "AETHER – Adaptive Ecosystem for Human Exploration and Resilience. Research prototype of an astronaut health, crew and spacecraft digital twin. All data are synthetic; not for clinical or operational use.",
+    "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.ico", "icons/icon.png"],
+    "externalBin": ["binaries/aether-backend"],
+    "windows": {
+      "webviewInstallMode": { "type": "downloadBootstrapper" },
+      "nsis": { "installMode": "currentUser", "displayLanguageSelector": false },
+      "wix": { "language": "en-US" }
+    }
+  }
+}

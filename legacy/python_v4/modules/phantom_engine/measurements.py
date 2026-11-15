@@ -1,0 +1,2 @@
+RECOMMENDATIONS={'sleep_hours':'Record sleep duration','resting_hr':'Measure resting pulse','fatigue':'Record perceived fatigue (0-10)','stress':'Record perceived stress (0-10)','activity_minutes':'Record recent activity minutes','reaction_ms':'Complete an optional reaction-time task'}
+def suggest(missing):return [{'metric':m,'reason':'Missing input limits multifactor interpretation','action':RECOMMENDATIONS.get(m,'Collect this measurement if available')} for m in missing]

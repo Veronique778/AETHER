@@ -1,0 +1,265 @@
+{
+  "baseline": {
+    "assignments": [
+      {
+        "task_id": "inspect",
+        "crew_ids": [
+          1
+        ],
+        "start": 480,
+        "end": 540
+      },
+      {
+        "task_id": "repair",
+        "crew_ids": [
+          2
+        ],
+        "start": 540,
+        "end": 630
+      },
+      {
+        "task_id": "samples",
+        "crew_ids": [
+          3
+        ],
+        "start": 480,
+        "end": 540
+      },
+      {
+        "task_id": "experiment",
+        "crew_ids": [
+          1,
+          3
+        ],
+        "start": 555,
+        "end": 645
+      },
+      {
+        "task_id": "report",
+        "crew_ids": [
+          1
+        ],
+        "start": 660,
+        "end": 720
+      },
+      {
+        "task_id": "inventory",
+        "crew_ids": [
+          2
+        ],
+        "start": 480,
+        "end": 525
+      }
+    ],
+    "metrics": {
+      "scheduled_tasks": 6,
+      "priority_score": 12210,
+      "high_priority_completed": 3,
+      "work_minutes": {
+        "1": 210.0,
+        "2": 135.0,
+        "3": 150.0
+      },
+      "load_hours": {
+        "1": 1.75,
+        "2": 1.35,
+        "3": 1.25
+      },
+      "total_work_minutes": 495.0,
+      "load_std": 0.21602468994692867,
+      "max_load": 1.75,
+      "available_minutes": {
+        "1": 720,
+        "2": 720,
+        "3": 720
+      },
+      "conflicts": 0,
+      "violations": [],
+      "rest_constraints_met": true
+    }
+  },
+  "alternatives": [
+    {
+      "strategy": "earliest",
+      "status": "optimal_on_grid",
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "mip_gap": 0.0,
+      "step_minutes": 15,
+      "assignments": [
+        {
+          "task_id": "inspect",
+          "crew_ids": [
+            1
+          ],
+          "start": 480,
+          "end": 540
+        },
+        {
+          "task_id": "inventory",
+          "crew_ids": [
+            2
+          ],
+          "start": 480,
+          "end": 525
+        },
+        {
+          "task_id": "samples",
+          "crew_ids": [
+            3
+          ],
+          "start": 480,
+          "end": 540
+        },
+        {
+          "task_id": "repair",
+          "crew_ids": [
+            2
+          ],
+          "start": 540,
+          "end": 630
+        },
+        {
+          "task_id": "experiment",
+          "crew_ids": [
+            1,
+            3
+          ],
+          "start": 555,
+          "end": 645
+        },
+        {
+          "task_id": "report",
+          "crew_ids": [
+            1
+          ],
+          "start": 660,
+          "end": 720
+        }
+      ],
+      "unscheduled": [],
+      "metrics": {
+        "scheduled_tasks": 6,
+        "priority_score": 12210,
+        "high_priority_completed": 3,
+        "work_minutes": {
+          "1": 210.0,
+          "2": 135.0,
+          "3": 150.0
+        },
+        "load_hours": {
+          "1": 1.75,
+          "2": 1.35,
+          "3": 1.25
+        },
+        "total_work_minutes": 495.0,
+        "load_std": 0.21602468994692867,
+        "max_load": 1.75,
+        "available_minutes": {
+          "1": 720,
+          "2": 720,
+          "3": 720
+        },
+        "conflicts": 0,
+        "violations": [],
+        "rest_constraints_met": true
+      },
+      "criteria": "Maximize sum of 10^(priority-1); then favor earlier starts",
+      "limitations": [
+        "Optimality applies to the chosen start-time grid and weighted objective.",
+        "Each assigned member must have all required skills. A break follows every task."
+      ]
+    },
+    {
+      "strategy": "balanced",
+      "status": "optimal_on_grid",
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "mip_gap": 0.0,
+      "step_minutes": 15,
+      "assignments": [
+        {
+          "task_id": "inspect",
+          "crew_ids": [
+            2
+          ],
+          "start": 480,
+          "end": 540
+        },
+        {
+          "task_id": "inventory",
+          "crew_ids": [
+            1
+          ],
+          "start": 480,
+          "end": 525
+        },
+        {
+          "task_id": "samples",
+          "crew_ids": [
+            3
+          ],
+          "start": 480,
+          "end": 540
+        },
+        {
+          "task_id": "experiment",
+          "crew_ids": [
+            1,
+            3
+          ],
+          "start": 555,
+          "end": 645
+        },
+        {
+          "task_id": "repair",
+          "crew_ids": [
+            2
+          ],
+          "start": 555,
+          "end": 645
+        },
+        {
+          "task_id": "report",
+          "crew_ids": [
+            1
+          ],
+          "start": 660,
+          "end": 720
+        }
+      ],
+      "unscheduled": [],
+      "metrics": {
+        "scheduled_tasks": 6,
+        "priority_score": 12210,
+        "high_priority_completed": 3,
+        "work_minutes": {
+          "1": 195.0,
+          "2": 150.0,
+          "3": 150.0
+        },
+        "load_hours": {
+          "1": 1.625,
+          "2": 1.475,
+          "3": 1.25
+        },
+        "total_work_minutes": 495.0,
+        "load_std": 0.1541103500742244,
+        "max_load": 1.625,
+        "available_minutes": {
+          "1": 720,
+          "2": 720,
+          "3": 720
+        },
+        "conflicts": 0,
+        "violations": [],
+        "rest_constraints_met": true
+      },
+      "criteria": "Maximize sum of 10^(priority-1); then minimize maximum crew load",
+      "limitations": [
+        "Optimality applies to the chosen start-time grid and weighted objective.",
+        "Each assigned member must have all required skills. A break follows every task."
+      ]
+    }
+  ],
+  "identical": false,
+  "explanation": "Earlier starts versus lower maximum weighted crew load."
+}

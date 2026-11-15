@@ -1,0 +1,33 @@
+name: AETHER-1.4-Portable-Windows
+# Builds the portable EXE on a Windows runner (keep the repository private unless the team agrees otherwise).
+on:
+  workflow_dispatch:
+  push:
+    tags: ["aether-v1.4*"]
+permissions:
+  contents: read
+jobs:
+  portable:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          architecture: x64
+      - name: Build, test and freeze (no Node.js used)
+        shell: cmd
+        run: BUILD_PORTABLE_1_4_WINDOWS.bat
+      - name: Validate frozen smoke report
+        shell: pwsh
+        run: |
+          $r = Get-Content aether_1_4_portable_smoke.json -Raw | ConvertFrom-Json
+          if ($r.status -ne 'pass' -or -not $r.frozen) { throw "Frozen smoke test failed: $($r.failed) checks" }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: AETHER-1.4-Windows-Portable
+          path: |
+            AETHER_1_4_FINAL_WINDOWS_BINARY.zip
+            aether_1_4_portable_smoke.json

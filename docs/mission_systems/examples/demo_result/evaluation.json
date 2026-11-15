@@ -1,0 +1,19 @@
+{
+  "threshold": {
+    "tp": 0,
+    "fp": 0,
+    "tn": 147,
+    "fn": 0,
+    "precision": null,
+    "recall": null,
+    "f1": null,
+    "abstained": 0,
+    "coverage": 1.0,
+    "definition": "Per crew/time sample. Missing/abstaining predictions count as no alert; missed positive labels count as FN.",
+    "limitation": "Scores measure detection of injected synthetic events, not clinical accuracy."
+  },
+  "phantom": null,
+  "phantom_status": "not_connected",
+  "model_version": "educational-1.0",
+  "seed": 67
+}

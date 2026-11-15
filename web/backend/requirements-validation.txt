@@ -1,0 +1,2 @@
+# Developer-only scientific evaluation dependency.
+matplotlib>=3.9,<4

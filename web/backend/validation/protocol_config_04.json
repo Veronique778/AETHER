@@ -1,0 +1,57 @@
+{
+  "protocol_id": "AETHER-BE3-04-PHANTOM-HR-SYNTH-v1",
+  "detector": {
+    "method_id": "phantom_hr_univariate_1_4",
+    "processing_version": "aether-phantom-personal-1.5.1",
+    "fingerprint_sha256": "b9d4bb96aa11d5716e7643771ededc9ec0eb604fd43372161db325fbab8cf00c",
+    "fingerprint_definition": "sha256(source of contact_rule,_screen,window_coverage,window_usable,_windows,_baseline,compute + json(PARAMETERS, sort_keys) + PROCESSING_VERSION)",
+    "tuning": "none — all parameters frozen before the experiment"
+  },
+  "data_class": "synthetic",
+  "recording": {"duration_min": 180, "baseline_min": 60, "test_start_min": 60, "window_min": 5},
+  "subjects": {
+    "development_seeds": [1000, 1019],
+    "test_seeds": [2000, 2059],
+    "resting_hr_bpm_uniform": [55, 75],
+    "beat_noise_sd_bpm_uniform": [1.5, 3.5],
+    "slow_component": {"model": "AR(1) per 60 s step", "phi": 0.95, "stationary_sd_bpm_uniform": [1.0, 3.0]},
+    "hr_reported_as": "integer bpm (BLE HRS uint8 rounding)"
+  },
+  "default_cadence": {"model": "2 s ± uniform jitter 0.3 s"},
+  "scenarios": {
+    "N0":   {"kind": "null"},
+    "ST5":  {"kind": "step", "delta_bpm": 5,  "onset_min_uniform": [70, 120]},
+    "ST10": {"kind": "step", "delta_bpm": 10, "onset_min_uniform": [70, 120]},
+    "ST15": {"kind": "step", "delta_bpm": 15, "onset_min_uniform": [70, 120]},
+    "ST20": {"kind": "step", "delta_bpm": 20, "onset_min_uniform": [70, 120]},
+    "SD15": {"kind": "step", "delta_bpm": -15, "onset_min_uniform": [70, 120]},
+    "DR":   {"kind": "drift", "slope_bpm_per_min": 0.2, "start_min": 60, "positive_offset_bpm": 10, "negative_offset_bpm": 3},
+    "SP":   {"kind": "spikes", "bursts": 6, "burst_s": 15, "delta_bpm": 50, "contact": true},
+    "SPC":  {"kind": "spikes", "bursts": 6, "burst_s": 15, "delta_bpm": 50, "contact": false},
+    "BO":   {"kind": "bouts", "bouts": 3, "bout_min_uniform": [5, 8], "delta_bpm": 20},
+    "CL":   {"kind": "step_with_contact_loss", "delta_bpm": 15, "onset_min_uniform": [70, 120], "contact_false_share": 0.5, "contact_loss_windows_after_onset": 3, "dropout_min": 20},
+    "BM":   {"kind": "baseline_missing", "dropout_min": 25},
+    "BMS":  {"kind": "baseline_missing_with_step", "dropout_min": 25, "delta_bpm": 15, "onset_min_uniform": [70, 120]},
+    "CAD1": {"kind": "step", "delta_bpm": 15, "onset_min_uniform": [70, 120], "cadence": "1 s ± 0.15 s"},
+    "CAD5": {"kind": "step", "delta_bpm": 15, "onset_min_uniform": [70, 120], "cadence": "5 s ± 0.5 s"},
+    "CAD15":{"kind": "step", "delta_bpm": 15, "onset_min_uniform": [70, 120], "cadence": "15 s ± 1.5 s"},
+    "IRR":  {"kind": "step", "delta_bpm": 15, "onset_min_uniform": [70, 120], "cadence": "exponential inter-arrival, mean 2 s"}
+  },
+  "labels": {
+    "step": "test window positive iff it starts at or after onset; window containing onset = ambiguous (excluded); before onset = negative",
+    "drift": "positive iff offset at window start >= 10 bpm; negative iff offset at window end < 3 bpm; else ambiguous",
+    "spikes/bouts/null/baseline_missing": "all test windows negative (no sustained change)"
+  },
+  "comparators": {
+    "C1_fixed_population": "flag usable window iff window mean HR > 100 bpm or < 40 bpm",
+    "C2_naive_rolling_median": "flag usable test window iff |mean - median(previous 12 usable windows, rolling, includes test windows)| >= 10 bpm"
+  },
+  "primary_endpoints": {
+    "A1": "ST15 recording-level detection recall >= 0.90 and Wilson 95% lower bound >= 0.80",
+    "A2": "N0 window-level false alarms <= 0.10 per hour AND N0 recording-level any-flag rate <= 0.10",
+    "A3": "BM and BMS: 100% insufficient_data, 0 flag, 0 no_flag",
+    "A4": "SPC recording-level any-flag rate <= N0 rate + 0.05"
+  },
+  "uncertainty": {"recording_level": "Wilson 95% (one recording per subject per scenario)",
+                  "window_level": "subject-cluster bootstrap, 2000 resamples, seed 20261115, percentile 95%"}
+}

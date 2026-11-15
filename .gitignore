@@ -1,0 +1,27 @@
+*.sqlite3
+__pycache__/
+.pytest_cache/
+node_modules/
+web/frontend/dist/
+desktop/src-tauri/target/
+desktop/src-tauri/binaries/*
+!desktop/src-tauri/binaries/.gitkeep
+desktop/backend/build/
+desktop/backend/dist/
+
+# AETHER v8 generated mobile artifacts
+mobile/node_modules/
+web/frontend/dist/
+mobile/android/.gradle/
+mobile/ios/Pods/
+
+# v0.8 build output
+dist-windows/
+desktop/dist/
+
+# 1.4 Windows build
+.build-venv/
+/build/
+/dist/
+aether_1_4_portable_smoke.json
+AETHER_1_4_FINAL_WINDOWS_BINARY.zip
